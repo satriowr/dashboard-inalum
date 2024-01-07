@@ -118,6 +118,7 @@
     </nav>
 </div>
 
+
 <div class="container mt-4">
   <div class="row">
     <!-- Kotak Atas -->
@@ -126,8 +127,8 @@
         <h3>Scanning Material Process</h3>
         <div class="center-container">
             <div class="semi-donut" 
-            style="--percentage : 49; --fill: #1ad1ff;">
-            <span style="color:black;">49 %</span>
+            style="--percentage : {{$data_sensor->scan_material}}; --fill: #1ad1ff;">
+            <span style="color:black;">{{$data_sensor->scan_material}} %</span>
             </div>
         </div>
  
@@ -142,7 +143,7 @@
   <path fill-rule="evenodd" d="M6 1a2.498 2.498 0 0 1 4 0c.818 0 1.545.394 2 1 .67 0 1.552.57 2 1h-2c-.314 0-.611-.15-.8-.4-.274-.365-.71-.6-1.2-.6-.314 0-.611-.15-.8-.4a1.497 1.497 0 0 0-2.4 0c-.189.25-.486.4-.8.4-.507 0-.955.251-1.228.638-.09.13-.194.25-.308.362H3c.13-.147.401-.432.562-.545a1.63 1.63 0 0 0 .393-.393A2.498 2.498 0 0 1 6 1"/>
 </svg>
         </div>
-        <div class="h5 mt-4">30%</div>
+        <div class="h5 mt-4">{{$data_sensor->load_capacity}} %</div>
       </div>
     </div>
     <div class="col-md-4">
@@ -154,7 +155,7 @@
   <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10m8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3"/>
 </svg>
         </div>
-        <div class="h5 mt-4">55 FPS</div>
+        <div class="h5 mt-4">{{$data_sensor->speed_conveyor}} FPS</div>
       </div>
     </div>
 
@@ -181,7 +182,7 @@
   <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
 </svg>
         </div>
-        <div class="h5 mt-4">2H 30M</div>
+        <div class="h5 mt-4">{{$data_sensor->duration}}</div>
       </div>
     </div>
     <div class="col-md-4">
@@ -192,7 +193,7 @@
   <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641zM6.374 1 4.168 8.5H7.5a.5.5 0 0 1 .478.647L6.78 13.04 11.478 7H8a.5.5 0 0 1-.474-.658L9.306 1z"/>
 </svg>
         </div>
-        <div class="h5 mt-4">10500 watt/volt</div>
+        <div class="h5 mt-4">{{$data_sensor->power}} watt/volt</div>
       </div>
     </div>
   </div>

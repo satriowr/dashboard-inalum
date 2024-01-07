@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'username',
         'password',
     ];
 
@@ -33,6 +34,8 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    protected $guard = 'web';
+
     /**
      * The attributes that should be cast.
      *
@@ -42,4 +45,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // /**
+    //  * Get the name of the unique identifier for the user.
+    //  *
+    //  * @return string
+    //  */
+    // public function getAuthIdentifierName()
+    // {
+    //     return 'username'; // Setel identitas pengguna ke kolom 'username'
+    // }
 }
